@@ -1,0 +1,20 @@
+function Callback_Togglebutton_Start(src, evnt)
+
+if strcmp(src.String, 'Start')
+    src.String = 'Stop';
+    src.ForegroundColor = 'r';
+
+    vid = videoinput('winvideo', 1, 'RGB24_1920x1080');
+    start(vid);
+    hPV = preview(vid);
+    hFPV = ancestor(hPV, 'Figure');
+    hFPV.Visible = 'off';
+
+    while bFG
+        hImg.CData = hPV.CData;
+        
+    
+else
+    src.String = 'Start';
+    src.ForegroundColor = 'g';
+end
